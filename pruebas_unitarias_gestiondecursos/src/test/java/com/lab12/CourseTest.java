@@ -16,7 +16,7 @@ public class CourseTest {
         String expected = "Curso: Python - Duración: 30 horas - Profesor: N/A";
         assertEquals(expected, c.showInformation());
     }
-
+/*¿Por qué volviste a construir la clase Course dentro del fichero de testing y no importaste la clase Course en este caso, como mismo hiciste con las otras clases Test? */
     class Course {
         private String title;
         private int duration;
