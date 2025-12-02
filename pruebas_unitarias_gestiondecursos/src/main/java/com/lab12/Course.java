@@ -1,6 +1,6 @@
 package com.lab12;
 
-public abstract class Course {
+public class Course {
     private String title;
     private int duration;
     private String professor;
@@ -9,6 +9,10 @@ public abstract class Course {
         this.title = title;
         this.duration = duration;
         this.professor = professor;
+    }
+
+    public Course(String title, int duration) {
+        this(title, duration, null);
     }
 
     public String getTitle() {
@@ -23,5 +27,12 @@ public abstract class Course {
         return professor;
     }
 
-    public abstract String showInformation();
+    public void setProfessor(String professor) {
+        this.professor = professor;
+    }
+
+    public String showInformation() {
+        String prof = (professor != null) ? professor : "N/A";
+        return "Curso: " + title + " - Duración: " + duration + " horas - Profesor: " + prof;
+    }
 }
